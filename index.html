@@ -28,13 +28,13 @@
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
     center: [35.7847,-78.6821], // EDIT coordinates to re-center map
-    zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
+    zoom: 3,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: true
   });
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
   L.tileLayer(
-    'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://osm.org/copyright">\
         OpenStreetMap</a> contributors, &copy;\
         <a href="https://carto.com/attribution">CARTO</a>'
@@ -43,6 +43,10 @@
   /* Display a point marker with pop-up text */
   L.marker([35.7847,-78.6821]).addTo(map) // EDIT marker coordinates
   .bindPopup("NC State University"); // EDIT pop-up text message
+
+  /* Display a point marker with pop-up text */
+  L.marker([35.7823703,-78.6803639]).addTo(map) // EDIT marker coordinates
+  .bindPopup("Biltmore Hall"); // EDIT pop-up text message
 
   /* Display a point marker with pop-up text */
   L.marker([35.7818,-78.6763]).addTo(map) // EDIT marker coordinates
